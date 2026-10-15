@@ -32,7 +32,7 @@ The **Secure Code Review Assistant** is an automated developer tool designed and
 │   ├── Input_Data/                # Vulnerable code samples & OWASP Top 10 catalog
 │   ├── Model_Prompts_Config/      # System prompts & model configurations
 │   ├── Synopsis/                  # Approved Synopsis (5-page PDF) & Faculty Approval
-│   └── Video/                     # 1080p Walkthrough Video & Speaker Script
+│   └── Video/                     # 1080p Walkthrough Video (demo_video.mp4)
 └── PCCOE_MrinmayeeKulkarni_124B2B025_CS_AIML.zip  # Master submission archive
 ```
 
