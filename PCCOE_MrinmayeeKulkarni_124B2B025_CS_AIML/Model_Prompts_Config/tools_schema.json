@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CodeAnalysisTools",
+  "description": "Function calling schemas for AI Code Reviewer Assistant",
+  "type": "object",
+  "properties": {
+    "report_vulnerability": {
+      "type": "object",
+      "description": "Reports an identified security flaw in submitted code",
+      "properties": {
+        "cwe_id": { "type": "string", "example": "CWE-89" },
+        "category": { "type": "string", "example": "SQL Injection" },
+        "severity": { "type": "string", "enum": ["Low", "Medium", "High", "Critical"] },
+        "cvss_score": { "type": "number", "minimum": 0.0, "maximum": 10.0 },
+        "line_number": { "type": "integer" },
+        "explanation": { "type": "string" },
+        "remediation": { "type": "string" },
+        "secure_code_patch": { "type": "string" }
+      },
+      "required": ["cwe_id", "category", "severity", "explanation", "remediation", "secure_code_patch"]
+    }
+  }
+}

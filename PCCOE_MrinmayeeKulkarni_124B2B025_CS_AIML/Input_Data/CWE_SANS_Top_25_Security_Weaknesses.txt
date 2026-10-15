@@ -1,0 +1,28 @@
+================================================================================
+CWE / SANS TOP 25 MOST DANGEROUS SOFTWARE WEAKNESSES REFERENCE GUIDE
+Project: Secure Code Review Assistant | Candidate: Mrinmayee Pramod Kulkarni (124B2B025)
+Department of Computer Engineering, PCCOE Pune
+================================================================================
+
+1. CWE-787: Out-of-bounds Write (Score: 63.6)
+   - Scope: C / C++ memory allocation and buffer management.
+   - Attack vector: Writing data past the end, or before the beginning, of the intended buffer.
+   - Remediation: Implement bounds checking, use std::vector / std::string in C++, bounded APIs.
+
+2. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+   - Scope: Web frontends (JavaScript, HTML, templates).
+   - Attack vector: Untrusted input placed into DOM or HTML response without sanitization.
+   - Remediation: Context-aware output encoding, Content Security Policy (CSP), textContent.
+
+3. CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+   - Scope: Database interaction layers in Python, Java, PHP, Node.js.
+   - Attack vector: Direct concatenation of user strings into SQL queries.
+   - Remediation: Parameterized queries, Prepared Statements, ORMs.
+
+4. CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')
+   - Scope: C / C++ legacy string functions (gets, strcpy, strcat, sprintf).
+   - Remediation: Use fgets, strncpy_s, snprintf.
+
+5. CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')
+   - Scope: File upload and file access endpoints.
+   - Remediation: Whitelist filenames, resolve realpaths and verify directory prefixes.

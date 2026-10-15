@@ -1,0 +1,7 @@
+Vulnerability_Category,Test_Samples,Detected_Count,Detection_Rate_Pct,False_Positive_Rate_Pct,Avg_Latency_Seconds,Remediation_Valid_Pct
+CWE-89 SQL Injection,25,25,100.0,0.0,1.12,100.0
+CWE-120 Buffer Overflow,25,24,96.0,4.0,0.98,96.0
+CWE-79 Cross-Site Scripting,25,24,96.0,4.0,1.05,100.0
+CWE-22 Path Traversal,25,23,92.0,4.0,1.15,96.0
+CWE-502 Deserialization,20,19,95.0,5.0,1.2,90.0
+Overall Average,120,115,95.8,3.4,1.1,96.4

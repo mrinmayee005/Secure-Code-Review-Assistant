@@ -1,0 +1,66 @@
+[
+    {
+        "id": "Q01",
+        "question": "What is the nominal operating voltage and cell chemistry of the Tata Gen-2 Ziptron battery pack?",
+        "ground_truth_context": "The Gen-2 Ziptron High-Voltage (HV) battery pack operates at a nominal voltage of 320V DC, utilizing Lithium Iron Phosphate (LiFePO4 / LFP) prismatic cells.",
+        "golden_answer": "The nominal voltage is 320V DC, and it uses Lithium Iron Phosphate (LiFePO4 / LFP) prismatic cells.",
+        "source_doc": "Tata_EV_Battery_Management_System_Manual.txt",
+        "source_section": "Section 1.1"
+    },
+    {
+        "id": "Q02",
+        "question": "What are the two capacity configurations available for the Ziptron pack and their series cell counts?",
+        "ground_truth_context": "Standard Range Pack: 30.2 kWh gross capacity, 96 cells in series (96S1P configuration). Long Range Pack: 40.5 kWh gross capacity, 108 cells in series (108S1P configuration).",
+        "golden_answer": "Standard Range is 30.2 kWh with 96 cells in series (96S1P), and Long Range is 40.5 kWh with 108 cells in series (108S1P).",
+        "source_doc": "Tata_EV_Battery_Management_System_Manual.txt",
+        "source_section": "Section 1.1"
+    },
+    {
+        "id": "Q03",
+        "question": "At what temperature threshold does high-temperature power throttling activate, and when does emergency thermal abort trigger?",
+        "ground_truth_context": "If any cell sensor reports > 48\u00b0C, maximum discharge power is throttled by 30%. Critical Thermal Runaway Abort: If cell temperature exceeds 55\u00b0C, or a temperature gradient across adjacent cells exceeds 8\u00b0C, the BMS trips the Main Positive and Negative Contactors within 40 milliseconds.",
+        "golden_answer": "High temperature throttling (30% power reduction) triggers at > 48\u00b0C. Emergency shutdown trips contactors within 40ms if any cell exceeds 55\u00b0C or a cell delta exceeds 8\u00b0C.",
+        "source_doc": "Tata_EV_Battery_Management_System_Manual.txt",
+        "source_section": "Section 2.1"
+    },
+    {
+        "id": "Q04",
+        "question": "What triggers DTC P0A80 and what is the maximum allowable voltage delta between cell blocks?",
+        "ground_truth_context": "The BMS has detected a persistent cell voltage divergence exceeding 0.050V (50 mV) between the highest and lowest cell blocks under constant load or rest conditions.",
+        "golden_answer": "DTC P0A80 is triggered when there is a persistent cell voltage divergence exceeding 0.050V (50 mV) between highest and lowest cell blocks.",
+        "source_doc": "Automotive_OBD2_Diagnostic_Trouble_Codes_Manual.txt",
+        "source_section": "Section 1 (DTC P0A80)"
+    },
+    {
+        "id": "Q05",
+        "question": "What is the diagnostic procedure when resistance across OBD-II pins 6 and 14 measures 120 Ohms instead of 60 Ohms?",
+        "ground_truth_context": "Expected Reading: 60 Ohms (two 120-Ohm termination resistors in parallel). If reading is 120 Ohms: One termination resistor or branch is open circuit.",
+        "golden_answer": "A reading of 120 Ohms indicates that one of the two 120-Ohm CAN bus termination resistors or branches is open circuit, meaning the bus termination integrity is compromised.",
+        "source_doc": "Automotive_OBD2_Diagnostic_Trouble_Codes_Manual.txt",
+        "source_section": "Section 2 (DTC U0100)"
+    },
+    {
+        "id": "Q06",
+        "question": "How long must a technician wait after removing the Manual Service Disconnect (MSD) before verifying zero voltage, and why?",
+        "ground_truth_context": "Mandatory wait of minimum 10 minutes (600 seconds) to allow the high-capacitance DC link capacitors in the Traction Motor Inverter to bleed charge below 30V DC via internal discharge bleed resistors.",
+        "golden_answer": "A mandatory wait of 10 minutes (600 seconds) is required to allow high-capacitance DC link capacitors in the inverter to safely discharge below 30V DC.",
+        "source_doc": "Tata_Workshop_SOP_High_Voltage_Safety.txt",
+        "source_section": "Section 1 (Step 4)"
+    },
+    {
+        "id": "Q07",
+        "question": "What PPE class and rating are strictly required for high voltage electrical service work?",
+        "ground_truth_context": "Wear Class 0 High Voltage Insulated Rubber Gloves rated for 1,000V AC / 1,500V DC. Wear arc-flash safety face shield (minimum 8 cal/cm2 rating) and non-conductive safety footwear.",
+        "golden_answer": "Class 0 Insulated Rubber Gloves rated for 1,000V AC / 1,500V DC, an arc-flash face shield (>= 8 cal/cm2), and non-conductive safety boots.",
+        "source_doc": "Tata_Workshop_SOP_High_Voltage_Safety.txt",
+        "source_section": "Section 1 (Step 1)"
+    },
+    {
+        "id": "Q08",
+        "question": "What is the minimum allowable friction pad lining thickness during periodic brake maintenance?",
+        "ground_truth_context": "Minimum allowable friction lining thickness: 3.0 mm.",
+        "golden_answer": "The minimum allowable friction lining thickness is 3.0 mm.",
+        "source_doc": "Tata_Workshop_SOP_High_Voltage_Safety.txt",
+        "source_section": "Section 2"
+    }
+]

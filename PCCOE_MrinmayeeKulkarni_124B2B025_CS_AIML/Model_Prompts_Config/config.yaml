@@ -1,0 +1,41 @@
+# ==============================================================================
+# Secure Code Review Assistant - System Configuration
+# Candidate: Mrinmayee Pramod Kulkarni (PRN: 124B2B025) | PCCOE Pune
+# ==============================================================================
+
+system:
+  project_name: 'Secure Code Review Assistant'
+  academic_year: '2026-2027'
+  institution: 'Pimpri Chinchwad College of Engineering (PCCOE), Pune'
+  department: 'Computer Engineering'
+  version: '1.2.0'
+
+model:
+  primary_provider: 'google'
+  primary_model: 'gemini-1.5-flash'
+  fallback_model: 'gemini-1.5-pro'
+  temperature: 0.2
+  top_p: 0.95
+  max_output_tokens: 2048
+
+supported_languages:
+  - 'Python'
+  - 'C'
+  - 'C++'
+  - 'Java'
+  - 'JavaScript'
+
+security_frameworks:
+  - 'OWASP Top 10 (2021)'
+  - 'CWE / SANS Top 25'
+  - 'CVSS v3.1 Scoring'
+
+analysis_settings:
+  detect_injections: true
+  detect_buffer_overflows: true
+  detect_xss: true
+  detect_deserialization: true
+  provide_code_patches: true
+  export_formats:
+    - 'markdown'
+    - 'plaintext'
