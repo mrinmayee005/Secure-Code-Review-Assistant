@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Audio / temporary recording files
+*.wav
+*.ogg
+*.tmp
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
